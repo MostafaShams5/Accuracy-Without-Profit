@@ -1,0 +1,41 @@
+COMPREHENSIVE STATISTICAL REPORT
+===================================================
+
+MODEL: RandomForest
+------------------------------------------------------------
+FORECAST ACCURACY (Diebold-Mariano Test)
+   vs Efficient Market (Odds): DM Stat=5.7759, P-Value=7.6523e-09
+   CONCLUSION: Model is distinct (statistically significant difference).
+------------------------------------------------------------
+BENCHMARK            | N (Wks)  | DIFF     | P-VAL (2-Sided) | P-VAL (Superior) | CONCLUSION
+Bench_Favorite       | 496      |  +0.43% | 0.73859         | 0.36930         | No Edge
+Bench_Home           | 496      |  -0.40% | 0.85377         | 0.57311         | No Edge
+Bench_Underdog       | 496      |  +1.52% | 0.67745         | 0.33872         | No Edge
+Bench_BigSix         | 223      |  +2.26% | 0.33076         | 0.16538         | No Edge
+
+
+MODEL: LightGBM
+------------------------------------------------------------
+FORECAST ACCURACY (Diebold-Mariano Test)
+   vs Efficient Market (Odds): DM Stat=8.7446, P-Value=0.0000e+00
+   CONCLUSION: Model is distinct (statistically significant difference).
+------------------------------------------------------------
+BENCHMARK            | N (Wks)  | DIFF     | P-VAL (2-Sided) | P-VAL (Superior) | CONCLUSION
+Bench_Favorite       | 496      |  +1.26% | 0.39695         | 0.19848         | No Edge
+Bench_Home           | 496      |  +0.42% | 0.84616         | 0.42308         | No Edge
+Bench_Underdog       | 496      |  +2.34% | 0.51515         | 0.25757         | No Edge
+Bench_BigSix         | 223      |  +1.71% | 0.48417         | 0.24208         | No Edge
+
+
+MODEL: XGBoost
+------------------------------------------------------------
+FORECAST ACCURACY (Diebold-Mariano Test)
+   vs Efficient Market (Odds): DM Stat=11.5802, P-Value=0.0000e+00
+   CONCLUSION: Model is distinct (statistically significant difference).
+------------------------------------------------------------
+BENCHMARK            | N (Wks)  | DIFF     | P-VAL (2-Sided) | P-VAL (Superior) | CONCLUSION
+Bench_Favorite       | 496      |  +2.75% | 0.10924         | 0.05462         | AI WINS (Marginal)
+Bench_Home           | 496      |  +1.91% | 0.39852         | 0.19926         | No Edge
+Bench_Underdog       | 496      |  +3.83% | 0.27786         | 0.13893         | No Edge
+Bench_BigSix         | 223      |  +3.17% | 0.23900         | 0.11950         | No Edge
+

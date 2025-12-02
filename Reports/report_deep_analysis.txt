@@ -1,0 +1,51 @@
+DEEP DIVE FORENSIC REPORT
+=========================
+
+1. FEATURE IMPORTANCE (SHAP VALUES)
+               col_name  feature_importance_vals
+               HomeOdds                 0.332460
+               AwayOdds                 0.240026
+      Away_Avg_Shots_L5                 0.130344
+     Home_Avg_Points_L5                 0.122510
+     Away_Avg_Points_L5                 0.113710
+Home_Avg_ShotsTarget_L5                 0.113057
+      Home_Avg_Shots_L5                 0.108276
+    Home_Avg_Corners_L5                 0.104573
+    Away_Avg_Corners_L5                 0.103651
+Away_Avg_ShotsTarget_L5                 0.086888
+
+2. ALPHA DECAY (MARKET EFFICIENCY EVOLUTION)
+          ROI
+Season       
+2006     1.18
+2007     1.62
+2008     4.26
+2009    -0.74
+2010    -4.59
+2011    -0.59
+2012     3.90
+2013     1.12
+2014    18.31
+2015    -5.26
+2016     0.50
+2017   -15.10
+2018    10.02
+2019    -4.05
+2020   -13.24
+
+3. KELLY CRITERION VALIDATION
+   - Final Bankroll (Flat):  $11,611.00
+   - Final Bankroll (Kelly): $9,206.11
+   -> Kelly UNDERPERFORMED. Evidence of Miscalibration.
+
+4. PROBABILITY CALIBRATION (ECE)
+   Expected Calibration Error: 0.1109
+   Interpretation: The average gap between Model Confidence and Reality.
+   > 0.05 implies poor calibration (explains Kelly failure).
+
+5. CONCEPT DRIFT (KS-TEST)
+   Comparing Early Era (2006-2012) vs Late Era (2015-2021):
+   - Error Distribution Shift P-Value: 2.9025e-01
+   - Early Era Mean Brier Error: 0.2422
+   - Late Era Mean Brier Error:  0.2336
+   -> No significant drift detected.

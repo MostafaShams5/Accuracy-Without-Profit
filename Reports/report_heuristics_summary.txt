@@ -1,0 +1,14 @@
+HEURISTIC STRATEGIES REPORT
+===========================
+
+       Strategy  Accuracy       ROI  Total_PnL  Bets_Placed
+    Form Bettor  0.479528 -2.651359   -24283.8         9159
+   Big Six Bias  0.604534 -2.509801   -10960.3         4367
+Bet on Favorite  0.535682 -4.135783   -41089.0         9935
+Bet on Underdog  0.213286 -8.192159   -81389.1         9935
+  Bet Home Team  0.468848 -2.418369   -24026.5         9935
+
+ ANALYSIS:
+ - 'Bet on Favorite' typically has high Accuracy but negative ROI (The Favorite-Longshot Bias).
+ - 'Bet on Underdog' typically has high variance and highly negative ROI.
+ - 'Big Six Bias' tests if blindly following prestige pays off.

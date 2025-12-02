@@ -1,0 +1,120 @@
+================================================================================
+STATISTICAL REPORT: CRASH GAME ANALYSIS
+================================================================================
+Generated: 2025-12-01T16:31:07.846931+00:00 UTC
+Data source: 1xbet_crash_data.csv
+Random seed: 42
+================================================================================
+
+--------------------------------------------------------------------------------
+SECTION: Descriptive Statistics
+--------------------------------------------------------------------------------
+Core descriptive statistics:
+count    2596.000000
+mean        4.130844
+std         5.734458
+min         1.000000
+25%         1.270000
+50%         1.930000
+75%         3.752500
+max        34.950000
+
+Total Rounds Analyzed: 2,596
+Skewness: 2.9106
+Kurtosis: 8.4580
+Probability of Instant Bust (<= 1.00x): 4.04%
+
+
+--------------------------------------------------------------------------------
+SECTION: House Edge Grid
+--------------------------------------------------------------------------------
+House-edge grid (with 95% Wilson confidence intervals):
+ cashout    p_hat  house_edge    he_low  he_high
+1.010000 0.959553    0.030851  0.023858 0.039216
+1.020000 0.951079    0.029900  0.022095 0.039064
+1.030000 0.942989    0.028721  0.020191 0.038600
+1.040000 0.930663    0.032111  0.022596 0.042949
+1.050000 0.917951    0.036152  0.025705 0.047896
+1.060000 0.909861    0.035547  0.024503 0.047875
+1.070000 0.902928    0.033867  0.022311 0.046698
+1.080000 0.893683    0.034823  0.022639 0.048263
+1.090000 0.884438    0.035963  0.023173 0.049991
+1.100000 0.877889    0.034322  0.021079 0.048794
+1.110000 0.865562    0.039226  0.025258 0.054392
+1.250000 0.766564    0.041795  0.021956 0.062619
+1.500000 0.632512    0.051233  0.023726 0.079326
+2.000000 0.484206    0.031587 -0.006880 0.069960
+3.000000 0.312018    0.063945  0.009676 0.116546
+5.000000 0.185670    0.071649 -0.005443 0.144096
+
+--------------------------------------------------------------------------------
+SECTION: Formal Test for Randomness (ADF Test)
+--------------------------------------------------------------------------------
+The Augmented Dickey-Fuller (ADF) test is a formal statistical test for stationarity.
+A time series is 'stationary' if its statistical properties (like mean and variance)
+do not change over time. For gambling outcomes, stationarity is a strong indicator of
+unpredictability and randomness, as it means there are no trends to exploit.
+
+Null Hypothesis (H0): The series has a unit root (it is non-stationary and has a time-dependent structure).
+Alternative Hypothesis (H1): The series has no unit root (it is stationary and random).
+
+Test Statistic: -16.8788
+P-value: 1.0670e-29
+
+Interpretation:
+A very low p-value (typically < 0.05) allows us to reject the null hypothesis.
+Our p-value is extremely low, providing strong statistical evidence that the series
+of round-to-round changes is stationary. This formally supports the conclusion from the
+visual ACF/PACF plots: the game's outcomes are statistically random and do not
+contain exploitable trends.
+
+--------------------------------------------------------------------------------
+SECTION: LSTM Forecasting (Expanding-window CV)
+--------------------------------------------------------------------------------
+Method: Expanding-window cross-validation (n_folds=5)
+Sequence Length: 15
+
+Mean LSTM MSE (scaled): 2.931711e-02
+Mean Persistence MSE (scaled): 5.778014e-02
+Ratio (LSTM / Persistence): 0.5074
+
+
+--------------------------------------------------------------------------------
+SECTION: Autoencoder Reconstruction & Surrogate Comparison
+--------------------------------------------------------------------------------
+AE MAE on REAL Test Data (Distribution of reconstruction errors):
+count    517.000000
+mean       0.080816
+std        0.033815
+min        0.013088
+25%        0.056819
+50%        0.078265
+75%        0.099668
+max        0.232390
+
+AE MAE on SHUFFLED Surrogate Data (Distribution of reconstruction errors):
+count    517.000000
+mean       0.077279
+std        0.040325
+min        0.012848
+25%        0.048026
+50%        0.067709
+75%        0.100014
+max        0.206135
+
+Kolmogorov-Smirnov (KS) Test:
+- Statistic: 0.147002
+- P-value: 2.729865e-05
+
+
+--------------------------------------------------------------------------------
+SECTION: Gambler Monte Carlo Simulation
+--------------------------------------------------------------------------------
+Parameters: Initial Balance=10,000, Base Bet=10, Sims=2,000, Rounds per Sim=2,500.
+
+Summary of Final Balances:
+       strategy  median_final  mean_final  p_rupture                                percentiles
+          fixed        8737.5 8726.362500     0.0000 [8129.25, 8475.0, 8737.5, 8958.75, 9315.0]
+     martingale        6855.0 6765.855000     0.2930       [0.0, 0.0, 6855.0, 11120.0, 16160.5]
+anti_martingale           0.0 1662.381875     0.7655   [0.0, 0.0, 0.0, 0.0, 10496.999999999998]
+

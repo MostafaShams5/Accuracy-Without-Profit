@@ -1,0 +1,10 @@
+WALK-FORWARD VALIDATION REPORT
+       Model  Accuracy       ROI  Total_PnL  Brier_Score  Bets_Placed
+     XGBoost  0.510654  0.293389     1611.0     0.638099         5491
+    LightGBM  0.517938 -1.109452    -6092.0     0.608776         5491
+RandomForest  0.528319 -2.012202   -11049.0     0.586316         5491
+
+ INTERPRETATION OF METRICS:
+ - Brier Score: Lower is better. Measures calibration accuracy.
+ - ROI: Return on Investment. Positive indicates profit.
+ - Accuracy: Percentage of correct outcome predictions.

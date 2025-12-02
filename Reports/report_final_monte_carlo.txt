@@ -1,0 +1,168 @@
+=====================================================================================
+        PARAMETRIC MONTE CARLO: COMPREHENSIVE STATISTICAL REPORT
+=====================================================================================
+
+## Global Simulation Parameters
+  - Population: 20,000 independent simulations
+  - Timeline:   5,000 bets per simulation
+  - Bankroll:   $10,000 start / $100 fixed stake
+
+=====================================================================================
+STRATEGY ANALYSIS: XGBOOST (AI)
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 51.07%
+  - Implied Payout Odds:  1.9638
+  - Expected Value (EV):  $0.2900 per bet
+  - Expected ROI:         0.30%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $11,519.68
+  - Median Final Bankroll:  $11,548.19
+  - Standard Deviation:     $7,017.89
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 1,019 players (5.1%)
+  - Probability of Profit:   58.3%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-38.08
+  - Sortino Ratio:           0.3796
+
+=====================================================================================
+STRATEGY ANALYSIS: LIGHTGBM (AI)
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 51.79%
+  - Implied Payout Odds:  1.9094
+  - Expected Value (EV):  $-1.1100 per bet
+  - Expected ROI:         -1.10%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $4,476.86
+  - Median Final Bankroll:  $4,545.47
+  - Standard Deviation:     $6,783.72
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 5,164 players (25.8%)
+  - Probability of Profit:   20.7%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-6,529.29
+  - Sortino Ratio:           -1.0750
+
+=====================================================================================
+STRATEGY ANALYSIS: RANDOM FOREST (AI)
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 52.83%
+  - Implied Payout Odds:  1.8548
+  - Expected Value (EV):  $-2.0100 per bet
+  - Expected ROI:         -2.00%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $-18.17
+  - Median Final Bankroll:  $42.74
+  - Standard Deviation:     $6,549.37
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 9,955 players (49.8%)
+  - Probability of Profit:   6.3%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-10,900.68
+  - Sortino Ratio:           -1.7309
+
+=====================================================================================
+STRATEGY ANALYSIS: BIG SIX BIAS
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 60.45%
+  - Implied Payout Odds:  1.6127
+  - Expected Value (EV):  $-2.5100 per bet
+  - Expected ROI:         -2.51%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $-2,547.09
+  - Median Final Bankroll:  $-2,469.36
+  - Standard Deviation:     $5,576.81
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 13,537 players (67.7%)
+  - Probability of Profit:   1.2%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-11,823.24
+  - Sortino Ratio:           -2.3409
+
+=====================================================================================
+STRATEGY ANALYSIS: BET ON FAVORITE
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 53.57%
+  - Implied Payout Odds:  1.7894
+  - Expected Value (EV):  $-4.1400 per bet
+  - Expected ROI:         -4.14%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $-10,686.03
+  - Median Final Bankroll:  $-10,610.53
+  - Standard Deviation:     $6,304.36
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 19,127 players (95.6%)
+  - Probability of Profit:   0.0%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-21,168.19
+  - Sortino Ratio:           -3.2874
+
+=====================================================================================
+STRATEGY ANALYSIS: FORM BETTOR
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 47.95%
+  - Implied Payout Odds:  2.0302
+  - Expected Value (EV):  $-2.6500 per bet
+  - Expected ROI:         -2.64%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $-3,203.71
+  - Median Final Bankroll:  $-3,148.49
+  - Standard Deviation:     $7,165.21
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 13,476 players (67.4%)
+  - Probability of Profit:   3.2%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-15,126.90
+  - Sortino Ratio:           -1.9904
+
+=====================================================================================
+STRATEGY ANALYSIS: BET HOME TEAM
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 46.88%
+  - Implied Payout Odds:  2.0815
+  - Expected Value (EV):  $-2.4200 per bet
+  - Expected ROI:         -2.41%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $-2,045.35
+  - Median Final Bankroll:  $-2,100.00
+  - Standard Deviation:     $7,357.67
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 12,295 players (61.5%)
+  - Probability of Profit:   5.1%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-14,172.61
+  - Sortino Ratio:           -1.8185
+
+=====================================================================================
+STRATEGY ANALYSIS: BET UNDERDOG
+=====================================================================================
+## Mathematical Expectation (Inputs)
+  - True Win Probability: 21.33%
+  - Implied Payout Odds:  4.3043
+  - Expected Value (EV):  $-8.1900 per bet
+  - Expected ROI:         -8.19%
+
+## Simulation Results (20,000 Lifetimes)
+  - Average Final Bankroll: $-30,967.13
+  - Median Final Bankroll:  $-31,165.21
+  - Standard Deviation:     $12,407.69
+
+## Risk Profile
+  - Risk of Ruin (Bankrupt): 19,874 players (99.4%)
+  - Probability of Profit:   0.1%
+  - 95% Value at Risk (VaR): In the worst 5% of cases, you end with <= $-51,395.26
+  - Sortino Ratio:           -3.3154

@@ -6,7 +6,7 @@
 This repository contains the complete analysis pipeline, datasets, and simulation code for the research paper: **"Accuracy Without Profit: A Statistical Evaluation of Machine Learning Profitability in the English Premier League."**
 
 **Publication Status:**
-This paper has **passed peer review** (approved by 4 reviewers) on Qeios and is currently in the final stages of labeling and publication.
+This paper has **passed peer review** (approved by 5 reviewers) on Qeios and is currently in the final stages of labeling and publication.
 
 ---
 

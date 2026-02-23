@@ -1,7 +1,7 @@
 # Accuracy Without Profit: A Statistical Evaluation of Machine Learning in the EPL
 
 [![DOI](https://img.shields.io/badge/DOI-10.32388%2F7A61RS-blue)](https://doi.org/10.32388/7A61RS)
-[![Status](https://img.shields.io/badge/Status-Peer%20Reviewed%20(4%20Approvals)-brightgreen)](https://doi.org/10.32388/7A61RS)
+[![Status](https://img.shields.io/badge/Status-Peer%20Reviewed%20(5%20Approvals)-brightgreen)](https://doi.org/10.32388/7A61RS)
 
 This repository contains the complete analysis pipeline, datasets, and simulation code for the research paper: **"Accuracy Without Profit: A Statistical Evaluation of Machine Learning Profitability in the English Premier League."**
 
